@@ -3,7 +3,7 @@ import { dummyCourses } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import humanizeDuration from 'humanize-duration'
 
-export const AppContext = createContext ()
+const AppContext = createContext()
 
 export const AppContextProvider = (props) =>{
     const currency =import.meta.env.VITE_CURRENCY ;
@@ -37,7 +37,7 @@ export const AppContextProvider = (props) =>{
 
     // Function to calculate course Duration
 
-    const calculateCourseDuration = () => {
+    const calculateCourseDuration = (course) => {
         let time = 0
         course.courseContent.map((chapter) => chapter.chapterContent.map(
             (lecture) => time += lecture.lectureDuration
@@ -47,7 +47,7 @@ export const AppContextProvider = (props) =>{
 
     // Function calculate to no of lectures in the course 
 
-    const calculateNoOfLectures = ()=> {
+    const calculateNoOfLectures = (course)=> {
           let totalLectures = 0;
           course.courseContent.forEach( chapter =>{
             if(Array.isArray(chapter.chapterContent)){
@@ -73,3 +73,5 @@ export const AppContextProvider = (props) =>{
         </AppContext.Provider>
     )
 }
+
+export { AppContext }
