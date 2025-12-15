@@ -70,6 +70,7 @@ export const AppContextProvider = (props) =>{
     }
     const value ={
             currency, allCourses, navigate, calculateRating, isEducator, setIsEducator, calculateChapterTime,calculateCourseDuration, calculateNoOfLectures, enrolledCourses, fetchUserEnrolledCourses
+            
     }
 
 
