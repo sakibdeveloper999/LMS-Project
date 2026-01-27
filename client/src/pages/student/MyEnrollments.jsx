@@ -10,7 +10,7 @@ const MyEnrollments = () => {
     { lectureCompleted: 7, totalLectures: 5 },
     { lectureCompleted: 2, totalLectures: 8 },
     { lectureCompleted: 5, totalLectures: 12 },
-    { lectureCompleted: 3, totalLectures: 9 },
+    { lectureCompleted: 9, totalLectures: 9 },
     { lectureCompleted: 6, totalLectures: 14 },
     { lectureCompleted: 1, totalLectures: 5 },
     { lectureCompleted: 8, totalLectures: 9 },
