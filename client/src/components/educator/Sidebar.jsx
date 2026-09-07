@@ -24,7 +24,7 @@ const Sidebar=()=>{
          key={item.name}
          end={item.path === '/educator'}
          className={({ isActive }) =>
-           `flex items-center md:flex-row flex-col md:justify-start justify-center py-3.5 md:px-10 gap-3 ${isActive ? 'bg-gray-200' : ''}`
+           `flex items-center md:flex-row flex-col md:justify-start justify-center py-3.5 md:px-10 gap-3 ${isActive ? 'bg-indigo-50 border-r[6px] border-r-indigo-500/90' : ''}`
          }
         >
           <img src={item.icon} alt='icon' className='w-6 h-6' />
