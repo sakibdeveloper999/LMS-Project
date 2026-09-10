@@ -1,11 +1,9 @@
-import React, { use, useContext, useEffect } from 'react'
-import { AppContext } from '../../context/AppContext';
+import React, { useEffect, useState } from 'react'
 import { assets, dummyDashboardData } from '../../assets/assets';
 import Loading from '../../components/student/Loading';
 
 const Dashboard=()=> {
 
-  const {currency} = useContext(AppContext) 
   const [dashboardData, setDashboardData] = useState(null)
 
   const fetchDashboardData = async ()=>{
@@ -41,7 +39,7 @@ const Dashboard=()=> {
           <div className="flex items-center gap-3 shadow-card border border-blue-500 p-4 w-56 rounded-md">
             <img src={assets.earning_icon} alt="earnings_icon" />
             <div >
-              <p className="text-2xl font-medium text-gray-600 ">{dashboardData.totalEarings}</p>
+              <p className="text-2xl font-medium text-gray-600 ">{dashboardData.totalEarnings}</p>
               <p className='text-base text-gray-500'>Total Earnings</p>
             </div>
           </div>
